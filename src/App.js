@@ -4,7 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import Chat from "./components/chat";
 function App() {
   let socket = useRef();
-  let endpoint = "http://localhost:5000";
+  let endpoint = process.env.REACT_APP_ENDPOINT;
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
