@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import socketClient from "socket.io-client";
+import { useRef, useEffect, useState } from "react";
 
+import Chat from "./components/chat";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  let socket = useRef();
+  let endpoint = "http://localhost:5000";
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    socket.current = socketClient(endpoint);
+    setLoading(true);
+  }, []);
+  return <>{loading && <Chat socket={socket} />}</>;
 }
 
 export default App;
