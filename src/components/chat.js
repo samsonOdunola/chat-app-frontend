@@ -65,7 +65,7 @@ const Chat = ({
                 className="chatmsg"
                 style={{
                   alignSelf: "flex-end",
-                  backgroundColor: "rgb(34, 205, 77)",
+                  backgroundColor: "#016a53",
                 }}
                 key={v4()}
               >

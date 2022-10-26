@@ -70,30 +70,30 @@ function App() {
           v4={v4}
         />
       ) : (
-        <div className="enter-details">
-          <h1>
-            Input your name and chat room you wish to join, you can also create
-            a new room{" "}
-          </h1>
-          <input
-            type="text"
-            placeholder="Enter name"
-            value={user}
-            onChange={(e) => setUser(e.target.value)}
-          />
-          <br></br>
-          <input
-            type="text"
-            placeholder="room"
-            value={room}
-            onChange={(e) => setRoom(e.target.value)}
-          />{" "}
-          <br></br>
-          <button onClick={() => handleEnterChatRoom()}> Enter</button>
-          <p>
-            Designed and coded by <strong>Samson Odunola</strong>{" "}
-          </p>
-        </div>
+        <main>
+          <div className="enter-details">
+            <h1>Login</h1>
+            <p>Input your name and chatroom</p>
+            <input
+              type="text"
+              placeholder="Enter name"
+              value={user}
+              onChange={(e) => setUser(e.target.value)}
+            />
+            <br></br>
+            <input
+              type="text"
+              placeholder="Enter room"
+              value={room}
+              onChange={(e) => setRoom(e.target.value)}
+            />{" "}
+            <br></br>
+            <button onClick={() => handleEnterChatRoom()}> Enter</button>
+            <p>
+              Designed and coded by <strong>Samson Odunola</strong>{" "}
+            </p>
+          </div>
+        </main>
       )}
     </>
   );
