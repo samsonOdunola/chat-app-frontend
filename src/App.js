@@ -17,7 +17,6 @@ function App() {
   // const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    console.log("connected", socket.connected);
     socket.on("connect", () => {
       setIsConnected(true);
     });
